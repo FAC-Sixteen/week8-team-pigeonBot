@@ -1,0 +1,30 @@
+{
+  "name": "week8-team-pigeonbot",
+  "version": "1.0.0",
+  "description": "Full-stack app using express and handlerbars. Facster-pedia, the ultimate source of information about facsters and their code editor of choice",
+  "main": "index.js",
+  "scripts": {
+    "test": "node ./src/controllers/tests/routes.test.js | tap-spec",
+    "start": "nodemon ./server/",
+    "build": "node src/model/build.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FAC-Sixteen/week8-team-pigeonBot.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FAC-Sixteen/week8-team-pigeonBot/issues"
+  },
+  "homepage": "https://github.com/FAC-Sixteen/week8-team-pigeonBot#readme",
+  "devDependencies": {
+    "express": "^4.16.4",
+    "express-handlebars": "^3.0.2",
+    "nodemon": "^1.18.11",
+    "serve-favicon": "^2.5.0",
+    "supertest": "^4.0.2",
+    "tap-spec": "^5.0.0",
+    "tape": "^4.10.1"
+  }
+}
