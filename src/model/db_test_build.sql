@@ -1,13 +1,14 @@
 BEGIN;
 
-DROP TABLE editors, users IF EXISTS CASCADE;
+DROP TABLE IF EXISTS editors CASCADE;
+DROP TABLE IF EXISTS users CASCADE;
 
-CREATE TABLE 'editors' (
+CREATE TABLE editors (
   'id' SERIAL PRIMARY KEY,
   'name' varchar NOT NULL
 );
 
-CREATE TABLE 'users' (
+CREATE TABLE users (
   'id' SERIAL PRIMARY KEY,
   'first_name' varchar NOT NULL,
   'last_name' varchar NOT NULL,
