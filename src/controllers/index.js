@@ -1,0 +1,1 @@
+const queries = require('../model/queries/index.js'); // getData + postEditor queries
