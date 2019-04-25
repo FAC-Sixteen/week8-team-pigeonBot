@@ -1,4 +1,5 @@
-const queries = require('../model/queries/index.js'); // getData + postEditor queries
+const express = require('express');
+// const queries = require('../model/queries/index.js'); // getData + postEditor queries
 
 const getUsers = require('../model/queries/getUsers');
 
