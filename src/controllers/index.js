@@ -11,12 +11,7 @@ router.get("/", (req, res) => {
   });
 });
 
-router.post("/post-form", (req, res) => {
-  console.log(req.body);
-  res.render("home", {
-    userDetails: getUsers
-  });
-});
+router.post("/post-form", postEditor.post);
 
 // (req, res) => {
 //   let allTheData = "";
