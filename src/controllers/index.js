@@ -1,8 +1,9 @@
 const express = require("express");
 //const queries = require("../model/queries/index.js"); // getData + postEditor queries
-const querystring = require("query-string");
 const getUsers = require("../model/queries/getUsers");
 const postEditor = require("../model/queries/postEditor");
+const error = require('./error');
+
 const router = express.Router();
 
 router.get("/", (req, res) => {
@@ -13,18 +14,7 @@ router.get("/", (req, res) => {
 
 router.post("/post-form", postEditor.post);
 
-// (req, res) => {
-//   let allTheData = "";
-//   req.on("data", chunk => {
-//     allTheData += chunk;
-//   });
-//   req.on("end", () => {
-//     const userData = querystring.parse(allTheData);
-//     console.log(userData);
-//   });
-//   res.render("home", {
-//     userDetails: getUsers
-//   });
-// });
+router.use(error.client);
+router.use(error.server);
 
 module.exports = router;
