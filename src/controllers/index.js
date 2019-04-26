@@ -8,6 +8,14 @@ const router = express.Router();
 router.get("/", (req, res) => {
   res.render("home", {
     userDetails: getUsers(1)
+    .then(result => {
+      return result[0].id
+    })
+    .then(final => {
+      console.log("This is the one --->", final)
+      return final;
+    })
+    .catch(error => "There was a booboo")
   });
 });
 
